@@ -23,8 +23,8 @@ Homework 1 for Hepsiburada Backend Bootcamp.
 
 - DELETE method usage
 	--
-	- to delete a existing customer by ID
-	- to delete a existing product by ID
+	- to delete an existing customer by ID
+	- to delete an existing product by ID
 
 ## Examples
 - **Get Customers**
@@ -32,21 +32,23 @@ Homework 1 for Hepsiburada Backend Bootcamp.
 > 
 > **HTTP Method:** GET
 >
-> **Response:** All customers as JSON _(HTTP Status 200 - OK)_
+> **Response:** All customers in JSON format _(HTTP Status 200 - OK)_
 ---
 - **Get Single Customer By ID**
 > **Request URL:** `localhost:5000/api/v1/customers/{id}`
 >
 > **HTTP Method:** GET
 >
-> **Response:** Customer info with given ID as JSON _(HTTP Status 200 - OK)_ or _HTTP Status 404 - Not Found_
+> **Response:** Customer info with given ID in JSON format _(HTTP Status 200 - OK)_ or _HTTP Status 404 - Not Found_
 ---
 - **Create New Customer**
 > **Request URL:** `localhost:5000/api/v1/customers`
 >
 > **HTTP Method:** POST
 >
-> **Body Parameter:** Customer data as JSON
+> **Request Body:** Customer data in JSON format
+>
+> **Body Example:**
 >
 > ```
 > {
@@ -65,7 +67,9 @@ Homework 1 for Hepsiburada Backend Bootcamp.
 >
 > **HTTP Method:** PUT
 >
-> **Body Parameter:** Customer data as JSON
+> **Request Body:** Customer data in JSON format
+>
+> **Body Example:**
 >
 > ```
 > {
@@ -91,21 +95,23 @@ Homework 1 for Hepsiburada Backend Bootcamp.
 > 
 > **HTTP Method:** GET
 >
-> **Response:** All products as JSON _(HTTP Status 200 - OK)_
+> **Response:** All products in JSON format _(HTTP Status 200 - OK)_
 ---
 - **Get Single Product By ID**
 > **Request URL:** `localhost:5000/api/v1/products/{id}`
 >
 > **HTTP Method:** GET
 >
-> **Response:** Product info with given ID as JSON _(HTTP Status 200 - OK)_ or _HTTP Status 404 - Not Found_
+> **Response:** Product info with given ID in JSON format _(HTTP Status 200 - OK)_ or _HTTP Status 404 - Not Found_
 ---
 - **Create New Product**
 > **Request URL:** `localhost:5000/api/v1/products`
 >
 > **HTTP Method:** POST
 >
-> **Body Parameter:** Product data as JSON
+> **Request Body:** Product data in JSON format
+>
+> **Body Example:**
 >
 > ```
 > {
@@ -124,7 +130,9 @@ Homework 1 for Hepsiburada Backend Bootcamp.
 >
 > **HTTP Method:** PUT
 >
-> **Body Parameter:** Product data as JSON
+> **Request Body:** Product data in JSON format
+>
+> **Body Example:**
 >
 > ```
 > {
@@ -140,13 +148,11 @@ Homework 1 for Hepsiburada Backend Bootcamp.
 
 ---
 - **Sort Products**
-> **Request URL:** `localhost:5000/api/v1/products/sort?sortBy={property}`
+> **Request URL:** `localhost:5000/api/v1/products/sort?sortBy={brand|name|category|price}`
 >
 > **HTTP Method:** GET
 >
-> **Query Parameters:** "brand", "name", "category", "price"
->
-> **Response:** All products sorted by given parameter as JSON _(HTTP Status 200 - OK)_ or _HTTP Status 400 - Bad Request_ or _HTTP Status 500 - Internal Server Error_
+> **Response:** All products sorted by given parameter in JSON format _(HTTP Status 200 - OK)_ or _HTTP Status 400 - Bad Request_ or _HTTP Status 500 - Internal Server Error_
 ---
 - **Delete Products By ID**
 > **Request URL:** `localhost:5000/api/v1/products/{id}`
